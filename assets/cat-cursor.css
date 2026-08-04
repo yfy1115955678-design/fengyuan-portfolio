@@ -1,0 +1,68 @@
+/* === 猫猫头自定义光标 === */
+@media (hover: hover) and (pointer: fine) {
+  * { cursor: none !important; }
+
+  .cat-cursor {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    pointer-events: none;
+    z-index: 2147483647;
+    transform: translate(-6px, -2px);
+    transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+  }
+
+  .cat-cursor img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.25));
+  }
+
+  /* 悬停在可交互元素上 — 猫猫变小 */
+  .cat-cursor.hover {
+    transform: translate(-6px, -2px) scale(0.7) rotate(-8deg);
+  }
+
+  /* 点击动效 — 猫猫弹跳挤压 */
+  .cat-cursor.click {
+    animation: catClick 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes catClick {
+    0%   { transform: translate(-6px, -2px) scale(1) rotate(0deg); }
+    30%  { transform: translate(-6px, -2px) scale(0.55) rotate(-15deg); }
+    60%  { transform: translate(-6px, -2px) scale(1.2) rotate(8deg); }
+    100% { transform: translate(-6px, -2px) scale(1) rotate(0deg); }
+  }
+
+  /* 点击涟漪 */
+  .cat-ripple {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgba(180, 90, 110, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2147483646;
+    transform: translate(-50%, -50%);
+    animation: catRipple 0.5s ease-out forwards;
+  }
+
+  @keyframes catRipple {
+    0%   { opacity: 0.6; transform: translate(-50%, -50%) scale(0.5); }
+    100% { opacity: 0;   transform: translate(-50%, -50%) scale(2.5); }
+  }
+}
+
+/* 移动端 / 触摸设备 — 不启用自定义光标 */
+@media (hover: none), (pointer: coarse) {
+  .cat-cursor, .cat-ripple { display: none !important; }
+}
+
+/* === 响应式换行 === */
+@media (min-width: 701px) {
+  .br-mobile { display: none; }
+}

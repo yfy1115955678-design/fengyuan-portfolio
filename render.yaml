@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: fengyuan-portfolio
+    env: static
+    buildCommand: echo "Static site - no build needed"
+    staticPublishPath: ./
+    routes:
+      - type: rewrite
+        source: /about
+        destination: /about/index.html
+      - type: rewrite
+        source: /resume
+        destination: /resume/index.html
+      - type: rewrite
+        source: /projects/cane
+        destination: /projects/cane/index.html
+      - type: rewrite
+        source: /projects/youji
+        destination: /projects/youji/index.html
+      - type: rewrite
+        source: /projects/nextly
+        destination: /projects/nextly/index.html
+      - type: rewrite
+        source: /projects/brand-concept
+        destination: /projects/brand-concept/index.html
