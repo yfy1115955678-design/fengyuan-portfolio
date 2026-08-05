@@ -1,6 +1,6 @@
 /* === 猫猫头自定义光标 === */
 @media (hover: hover) and (pointer: fine) {
-  * { cursor: none !important; }
+  html.cat-cursor-ready * { cursor: none !important; }
 
   .cat-cursor {
     position: fixed;

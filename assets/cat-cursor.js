@@ -1,7 +1,6 @@
 (function () {
   "use strict";
 
-  // 仅在支持 hover 的设备上启用
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
   var cursor = document.createElement("div");
@@ -12,7 +11,22 @@
   cursor.appendChild(img);
   cursor.style.left = "-100px";
   cursor.style.top = "-100px";
-  document.body.appendChild(cursor);
+
+  function ensureCursor() {
+    if (!cursor.parentNode) {
+      document.documentElement.appendChild(cursor);
+    }
+    if (!document.documentElement.classList.contains("cat-cursor-ready")) {
+      document.documentElement.classList.add("cat-cursor-ready");
+    }
+  }
+
+  ensureCursor();
+
+  var observer = new MutationObserver(function () {
+    ensureCursor();
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: false, attributes: true, attributeFilter: ["class"] });
 
   var mouseX = 0,
     mouseY = 0;
@@ -34,7 +48,6 @@
     if (!rafId) animate();
   });
 
-  // 悬停在可交互元素上
   var hoverSelector =
     'a, button, [role="button"], input, textarea, select, label, [tabindex], .project-card, .hero-feature';
 
@@ -50,17 +63,16 @@
     }
   });
 
-  // 点击动效 + 涟漪
   document.addEventListener("mousedown", function (e) {
     cursor.classList.remove("click");
-    void cursor.offsetWidth; // 强制重排以重启动画
+    void cursor.offsetWidth;
     cursor.classList.add("click");
 
     var ripple = document.createElement("div");
     ripple.className = "cat-ripple";
     ripple.style.left = e.clientX + "px";
     ripple.style.top = e.clientY + "px";
-    document.body.appendChild(ripple);
+    document.documentElement.appendChild(ripple);
     setTimeout(function () {
       if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
     }, 500);
@@ -72,7 +84,6 @@
     }, 200);
   });
 
-  // 鼠标离开窗口时隐藏
   document.addEventListener("mouseleave", function () {
     cursor.style.opacity = "0";
   });
