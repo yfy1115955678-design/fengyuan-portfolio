@@ -23,3 +23,15 @@ services:
       - type: rewrite
         source: /projects/brand-concept
         destination: /projects/brand-concept/index.html
+      - type: rewrite
+        source: /projects
+        destination: /projects/index.html
+      - type: rewrite
+        source: /ai-workflow
+        destination: /ai-workflow/index.html
+      - type: rewrite
+        source: /nextly-demo
+        destination: /nextly-demo/index.html
+      - type: rewrite
+        source: /nextly-demo/*
+        destination: /nextly-demo/index.html
