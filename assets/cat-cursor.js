@@ -11,41 +11,34 @@
   cursor.appendChild(img);
   cursor.style.left = "-100px";
   cursor.style.top = "-100px";
-
-  function ensureCursor() {
-    if (!cursor.parentNode) {
-      document.documentElement.appendChild(cursor);
-    }
-    if (!document.documentElement.classList.contains("cat-cursor-ready")) {
-      document.documentElement.classList.add("cat-cursor-ready");
-    }
-  }
-
-  ensureCursor();
-
-  var observer = new MutationObserver(function () {
-    ensureCursor();
-  });
-  observer.observe(document.documentElement, { childList: true, subtree: false, attributes: true, attributeFilter: ["class"] });
+  document.documentElement.appendChild(cursor);
 
   var mouseX = 0,
     mouseY = 0;
-  var curX = 0,
-    curY = 0;
+  var curX = -100,
+    curY = -100;
   var rafId = null;
+  var threshold = 0.5;
 
   function animate() {
     curX += (mouseX - curX) * 0.35;
     curY += (mouseY - curY) * 0.35;
     cursor.style.left = curX + "px";
     cursor.style.top = curY + "px";
+
+    if (Math.abs(mouseX - curX) < threshold && Math.abs(mouseY - curY) < threshold) {
+      curX = mouseX;
+      curY = mouseY;
+      rafId = null;
+      return;
+    }
     rafId = requestAnimationFrame(animate);
   }
 
   document.addEventListener("mousemove", function (e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    if (!rafId) animate();
+    if (!rafId) rafId = requestAnimationFrame(animate);
   });
 
   var hoverSelector =
