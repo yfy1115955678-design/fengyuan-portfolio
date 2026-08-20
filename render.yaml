@@ -18,6 +18,9 @@ services:
         source: /projects/youji
         destination: /projects/youji/index.html
       - type: rewrite
+        source: /projects/coronary
+        destination: /projects/coronary/index.html
+      - type: rewrite
         source: /projects/nextly
         destination: /projects/nextly/index.html
       - type: rewrite
