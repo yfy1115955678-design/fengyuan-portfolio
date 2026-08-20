@@ -3,6 +3,10 @@
 /projects                /projects/index.html                200
 /ai-workflow             /ai-workflow/index.html              200
 /projects/cane           /projects/cane/index.html           200
+/projects/coronary       /projects/coronary/index.html       200
 /projects/youji          /projects/youji/index.html          200
 /projects/nextly         /projects/nextly/index.html         200
 /projects/brand-concept  /projects/brand-concept/index.html  200
+
+/nextly-demo            /nextly-demo/index.html            200
+/nextly-demo/*          /nextly-demo/index.html            200
