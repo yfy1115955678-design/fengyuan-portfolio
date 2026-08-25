@@ -44,3 +44,42 @@
 .resume-footer p{color:var(--muted);margin:0;font-size:11px}
 @media (width<=960px){.leadership-grid,.team-workflow-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sample-review-flow{grid-template-columns:1fr auto 1.3fr auto 1fr}.sample-evidence-grid.coronary-results figure{grid-template-columns:minmax(0,1.45fr) minmax(230px,.75fr)}.team-workflow-section .section-heading{grid-template-columns:1fr;gap:20px}}
 @media (width<=700px){.cane-main-image{height:200%}.sample-review-flow{grid-template-columns:1fr}.sample-review-arrow{text-align:center;transform:rotate(90deg)}.leadership-grid,.team-workflow-grid,.team-workflow-evidence{grid-template-columns:1fr}.team-workflow-evidence>span{border-left:0;border-top:1px solid var(--hairline)}.sample-evidence-grid.coronary-results figure{grid-template-columns:1fr}.sample-evidence-grid.coronary-results figure img,.sample-evidence-grid.coronary-results figure:nth-child(2) img{height:auto;aspect-ratio:4/3;padding:10px}.sample-evidence-grid.coronary-results figcaption{border-left:0;border-top:1px solid var(--hairline-soft);padding:22px}.resume-links,.resume-contact-actions{flex-direction:column;align-items:stretch}.resume-links{gap:16px}.resume-contact-actions .button{width:100%}.footer-links{max-width:100%}.footer-contact .footer-links a{overflow-wrap:anywhere}}
+
+/* Nextly 2.0 portfolio update */
+.project-card-nextly .project-shot{object-fit:cover;object-position:left top}
+.nextly-2-stage{min-height:700px}
+.nextly-2-stage .walkthrough-image img{object-fit:cover;object-position:left top}
+.nextly-stage-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:42px}
+.nextly-stage-grid article{border:1px solid var(--hairline-soft);background:var(--surface);border-radius:14px;min-height:300px;padding:24px;display:flex;flex-direction:column}
+.nextly-stage-grid span,.nextly-system-grid span{color:var(--primary);font-size:9px;font-weight:700;letter-spacing:.08em}
+.nextly-stage-grid h3{margin:42px 0 10px;font-size:20px}
+.nextly-stage-grid b{font-size:14px;line-height:1.55}
+.nextly-stage-grid p{color:var(--muted);margin:18px 0 24px;font-size:12px;line-height:1.75}
+.nextly-stage-grid small{color:var(--muted);border-top:1px solid var(--hairline);margin-top:auto;padding-top:14px;font-family:var(--font-mono);font-size:9px}
+.nextly-system-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
+.nextly-system-grid article{background:var(--surface);border-radius:14px;min-height:250px;padding:26px;display:flex;flex-direction:column}
+.nextly-system-grid h3{margin:auto 0 14px;font-size:20px}
+.nextly-system-grid p{color:var(--muted);margin:0;font-size:12px;line-height:1.8}
+.nextly-conflict-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:12px;align-items:stretch;margin-top:40px}
+.nextly-conflict-flow article{border:1px solid var(--hairline);border-radius:14px;min-height:170px;padding:24px;display:flex;flex-direction:column}
+.nextly-conflict-flow article:nth-of-type(2){background:var(--primary-pale);border-color:#ffd7df}
+.nextly-conflict-flow article>span{color:var(--primary);font-size:10px;font-weight:700}
+.nextly-conflict-flow article>b{margin:auto 0 9px;font-size:16px}
+.nextly-conflict-flow article>p{color:var(--muted);margin:0;font-size:12px;line-height:1.7}
+.nextly-conflict-flow>div{color:var(--primary);align-self:center;font-size:22px}
+.nextly-review-note{border-left:3px solid var(--primary);background:var(--surface);border-radius:0 12px 12px 0;margin-top:24px;padding:24px 28px}
+.nextly-review-note strong{font-size:16px}
+.nextly-review-note p{max-width:920px;color:var(--muted);margin:10px 0 0;font-size:13px;line-height:1.85}
+.nextly-refresh-flow{border:1px solid var(--hairline);border-radius:14px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;margin-top:42px;overflow:hidden}
+.nextly-refresh-flow>div:not([aria-hidden]){min-height:145px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.nextly-refresh-flow>div[aria-hidden]{color:var(--primary);align-self:center;padding:0 4px;font-size:22px}
+.nextly-refresh-flow span{color:var(--primary);font-size:9px;font-weight:700;letter-spacing:.08em}
+.nextly-refresh-flow b{font-size:14px;line-height:1.6}
+.nextly-refresh-note{max-width:880px;color:var(--muted);margin:20px 0 0;font-size:13px;line-height:1.8}
+.nextly-boundary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:40px}
+.nextly-boundary-grid article{border:1px solid var(--hairline-soft);border-radius:14px;padding:28px}
+.nextly-boundary-grid article:first-child{background:var(--surface)}
+.nextly-boundary-grid b{font-size:18px}
+.nextly-boundary-grid p{color:var(--muted);margin:24px 0 0;font-size:13px;line-height:1.85}
+@media (width<=960px){.nextly-2-stage{min-height:570px}.nextly-stage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nextly-system-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nextly-conflict-flow{grid-template-columns:1fr auto 1fr}.nextly-conflict-flow>article:nth-of-type(3){grid-column:1}.nextly-conflict-flow>div:nth-of-type(2){display:none}.nextly-refresh-flow{grid-template-columns:1fr auto 1fr}.nextly-refresh-flow>div:nth-of-type(5){grid-column:1}.nextly-refresh-flow>div[aria-hidden]:nth-of-type(4){display:none}}
+@media (width<=700px){.nextly-2-stage{min-height:390px}.nextly-2-stage .walkthrough-image img{object-fit:contain}.nextly-stage-grid,.nextly-system-grid,.nextly-conflict-flow,.nextly-refresh-flow,.nextly-boundary-grid{grid-template-columns:1fr}.nextly-stage-grid article,.nextly-system-grid article{min-height:220px}.nextly-stage-grid h3{margin-top:28px}.nextly-conflict-flow>article:nth-of-type(3),.nextly-refresh-flow>div:nth-of-type(5){grid-column:auto}.nextly-conflict-flow>div,.nextly-refresh-flow>div[aria-hidden]{text-align:center;transform:rotate(90deg);padding:0}.nextly-conflict-flow>div:nth-of-type(2),.nextly-refresh-flow>div[aria-hidden]:nth-of-type(4){display:block}.nextly-refresh-flow{border:0;gap:10px;overflow:visible}.nextly-refresh-flow>div:not([aria-hidden]){border:1px solid var(--hairline);border-radius:12px;min-height:120px}.nextly-review-note{padding:22px}.nextly-boundary-grid article{padding:24px}}
