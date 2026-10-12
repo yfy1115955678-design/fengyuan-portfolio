@@ -12,6 +12,9 @@ services:
         source: /resume
         destination: /resume/index.html
       - type: rewrite
+        source: /projects/iron
+        destination: /projects/iron/index.html
+      - type: rewrite
         source: /projects/cane
         destination: /projects/cane/index.html
       - type: rewrite
