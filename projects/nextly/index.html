@@ -132,8 +132,8 @@
     <header class="case-hero shell">
       <div class="case-kicker"><span>CASE 05</span><span>AI WORKFLOW · 产品开发协作机制</span><span class="case-ai-badge">AI</span></div>
       <h1>Nextly 2.0</h1>
-      <p class="case-lede">Product Development Workflow</p>
-      <p class="case-summary-wide">把机会发现、市场研究、产品定义、落地验证和评审决策组织为一套 AI 协作 Workflow：AI 协助分析与影响定位，人确认关键决策，系统同步项目状态、版本与待办。</p>
+      <p class="case-lede">Product Development Workflow</p><p style="font-size:13px;line-height:1.7;color:var(--muted);margin:12px 0 0">当前是交互逻辑 Demo：使用模拟业务数据，未接入真实企业后端或生产级 AI 执行。</p>
+      <p class="case-summary-wide">围绕产品开发中的需求冲突与阶段决策，设计一套能标出阻塞、允许人工确认并保留版本记录的 Workflow 原型。</p>
       <p class="demo-disclaimer">Portfolio Demo · Mock Data</p>
       <div class="case-actions" aria-label="Nextly 2.0 项目链接">
         <a href="https://nextly-2-0-user-test.vercel.app/" class="button button-primary" target="_blank" rel="noopener noreferrer" aria-label="打开 Nextly 2.0 Portfolio Demo（新窗口打开）">在线体验 2.0 Demo <span aria-hidden="true">↗</span></a>
@@ -171,17 +171,45 @@
       <div class="case-content prose-large">
         <h2>企业需要的不是更多 Agent，而是一套能被执行的 Workflow。</h2>
         <p>在真实新品开发中，市场数据、评论、竞品、产品要求、BOM、供应商信息和评审结论往往分散在不同工具、表格、文档与 AI 对话中。问题不只在于整理耗时，更在于阶段之间容易丢失证据、约束和决策上下文。</p>
-        <p>Nextly 2.0 将 AI 处理、人工操作和项目状态放入同一条产品开发链路：每一步明确输入、输出、证据和下一步；当市场需求与落地边界冲突时，系统停止推进，把边界判断与最终责任交还给人。</p>
+        <p>我据此将阶段任务、证据关联、冲突提示和人工确认设计到同一个工作台，让产品开发者先处理当前阻塞，再查看决策带来的影响。</p>
         <p><strong>数据边界：</strong>商品、评论、报价等原始数据仍由影刀、卖家精灵或其他外部工具获取；AI 对已获得的数据进行清洗、结构化、分析与影响判断。</p>
       </div>
     </section>
 
-    <section class="case-section shell nextly-evolution">
+    <section class="case-section shell">
       <div class="case-section-heading">
-        <div class="case-section-label">02 / WHY 2.0</div>
+        <div class="case-section-label">02 / CONFLICT LOOP</div>
+        <h2>发现冲突时，先阻断，再修订。</h2>
+      </div>
+      <p class="case-intro">以下为模拟场景：需求写着“整机可用洗碗机清洗”，但泵体和 PCB 不支持。原型将其标记为阻塞，由用户确认修改，再更新需求版本与待办。</p>
+      <div class="nextly-conflict-flow" aria-label="从冲突发现到人工确认的处理流程">
+        <article><span>01</span><b>市场需求</b><p>整机洗碗机清洗</p></article><div aria-hidden="true">→</div>
+        <article><span>02</span><b>落地冲突</b><p>泵体与 PCB 不可进入洗碗机</p></article><div aria-hidden="true">→</div>
+        <article><span>03</span><b>AI 修改建议</b><p>改为主要接触水部件可拆洗</p></article><div aria-hidden="true">→</div>
+        <article><span>04</span><b>人工确认</b><p>接受、修改或保留原要求</p></article>
+      </div>
+      <div class="nextly-review-note">
+        <strong>“阻塞”意味着什么？</strong>
+        <p>证据、冲突或影响范围尚未完成确认，相关阶段不能继续推进。人工决定不会覆盖旧版本：产品定义保留 v1 → v2 差异，Decision Log 同时记录决定依据与受影响模块。</p>
+      </div>
+    </section><section class="case-section shell">
+      <div class="case-section-heading">
+        <div class="case-section-label">03 / STATE SYNC</div>
+        <h2>人工确认不是终点，而是下游状态更新的起点。</h2>
+      </div>
+      <div class="nextly-refresh-flow">
+        <div><span>HUMAN DECISION</span><b>接受清洁边界修订</b></div><div aria-hidden="true">→</div>
+        <div><span>VERSION</span><b>产品定义 v1 → v2</b></div><div aria-hidden="true">→</div>
+        <div><span>RECOMPUTE</span><b>落地结论与评审建议更新</b></div><div aria-hidden="true">→</div>
+        <div><span>TRACE</span><b>决定、依据与影响写入记录</b></div>
+      </div>
+      <p class="nextly-refresh-note">确认后，清洁边界冲突从“阻塞”变为“已解决”；泵体寿命报告与正式成本报价仍保留为打样推进条件，不会因为一次确认而被自动消除。</p>
+    </section><section class="case-section shell nextly-evolution">
+      <div class="case-section-heading">
+        <div class="case-section-label">04 / WHY 2.0</div>
         <h2>从解释 Agent 架构，转向支持真实开发任务。</h2>
       </div>
-      <p class="case-intro">回看早期版本后，问题不在于 Agent 数量不够，而在于系统更容易解释“后台如何分工”，却没有优先回答用户此刻要做什么、项目卡在哪里、一次决定会影响哪些下游内容。</p>
+      <p class="case-intro">早期版本更重 Agent 分工展示；2.0 把首页重心转向当前阶段、待确认问题和决策影响。</p>
       <div class="nextly-evolution-grid">
         <article><span>EARLY FOCUS</span><h3>Agent 与 Skill 分层</h3><p>以主控、专业 Agent 和能力组件解释系统结构，能够说明技术组织方式，但需要用户先理解架构。</p></article>
         <article><span>PRODUCT FRICTION</span><h3>任务与状态不够靠前</h3><p>开发者真正关心的是当前阶段、证据、冲突、待确认动作，以及确认之后如何更新项目。</p></article>
@@ -191,7 +219,7 @@
 
     <section class="case-section shell">
       <div class="case-section-heading">
-        <div class="case-section-label">03 / PRODUCT FLOW</div>
+        <div class="case-section-label">05 / PRODUCT FLOW</div>
         <h2>五个阶段，每一步只回答一个问题。</h2>
       </div>
       <div class="nextly-stage-grid" aria-label="Nextly 2.0 五阶段产品开发流程">
@@ -203,55 +231,15 @@
       </div>
     </section>
 
-    <section class="case-section shell">
-      <div class="case-section-heading">
-        <div class="case-section-label">04 / HUMAN × AI OPERATIONS</div>
-        <h2>AI 负责处理与提示，人负责边界与责任。</h2>
-      </div>
-      <p class="case-intro">Workflow 先定义什么时候由 AI 处理，什么时候必须停下来等人，以及一次决定要更新哪些下游状态。普通用户不需要理解后台如何编排，只需要看到当前任务、证据、冲突、可选动作和决定后的影响。</p>
-      <div class="nextly-system-grid">
-        <article><span>01 / PROCESS</span><h3>AI 协助分析</h3><p>清洗和结构化外部数据，汇总证据、形成初步判断，并定位要求变化可能影响的模块。</p></article>
-        <article><span>02 / DECIDE</span><h3>Human Gate</h3><p>机会选择、研究确认、冲突修订与阶段推进都由人决定；AI 不自动越过关键节点。</p></article>
-        <article><span>03 / SYNC</span><h3>状态同步</h3><p>人工确认后，系统同步产品定义、落地结论、评审建议、版本与待处理条件。</p></article>
-        <article><span>04 / TRACE</span><h3>可追溯记录</h3><p>要求保留依据和验收方式；Decision Log 记录决定、原因、影响范围与当前版本。</p></article>
-      </div>
-    </section>
+    
 
-    <section class="case-section shell">
-      <div class="case-section-heading">
-        <div class="case-section-label">05 / CONFLICT LOOP</div>
-        <h2>发现冲突时，先阻断，再修订。</h2>
-      </div>
-      <p class="case-intro">演示项目中，市场研究提出“整机洗碗机安全”，落地验证发现泵体与 PCB 无法满足这一表述。系统不会把冲突藏在结果里，也不会直接覆盖原判断。</p>
-      <div class="nextly-conflict-flow" aria-label="从冲突发现到人工确认的处理流程">
-        <article><span>01</span><b>市场需求</b><p>整机洗碗机清洗</p></article><div aria-hidden="true">→</div>
-        <article><span>02</span><b>落地冲突</b><p>泵体与 PCB 不可进入洗碗机</p></article><div aria-hidden="true">→</div>
-        <article><span>03</span><b>AI 修改建议</b><p>改为主要接触水部件可拆洗</p></article><div aria-hidden="true">→</div>
-        <article><span>04</span><b>人工确认</b><p>接受、修改或保留原要求</p></article>
-      </div>
-      <div class="nextly-review-note">
-        <strong>“阻塞”意味着什么？</strong>
-        <p>证据、冲突或影响范围尚未完成确认，相关阶段不能继续推进。人工决定不会覆盖旧版本：产品定义保留 v1 → v2 差异，Decision Log 同时记录决定依据与受影响模块。</p>
-      </div>
-    </section>
+    
 
-    <section class="case-section shell">
-      <div class="case-section-heading">
-        <div class="case-section-label">06 / STATE SYNC</div>
-        <h2>人工确认不是终点，而是下游状态更新的起点。</h2>
-      </div>
-      <div class="nextly-refresh-flow">
-        <div><span>HUMAN DECISION</span><b>接受清洁边界修订</b></div><div aria-hidden="true">→</div>
-        <div><span>VERSION</span><b>产品定义 v1 → v2</b></div><div aria-hidden="true">→</div>
-        <div><span>RECOMPUTE</span><b>落地结论与评审建议更新</b></div><div aria-hidden="true">→</div>
-        <div><span>TRACE</span><b>决定、依据与影响写入记录</b></div>
-      </div>
-      <p class="nextly-refresh-note">确认后，清洁边界冲突从“阻塞”变为“已解决”；泵体寿命报告与正式成本报价仍保留为打样推进条件，不会因为一次确认而被自动消除。</p>
-    </section>
+    
 
     <section class="case-section shell nextly-evaluation">
       <div class="case-section-heading">
-        <div class="case-section-label">07 / EVALUATION PLAN</div>
+        <div class="case-section-label">06 / EVALUATION PLAN</div>
         <h2>先定义怎样判断 Workflow 是否真的有用。</h2>
       </div>
       <p class="case-intro">当前 Demo 展示的是产品逻辑，不把界面完成度当作业务效果。后续评价将围绕以下四个问题展开，结果尚未形成。</p>
@@ -276,7 +264,7 @@
 
     <section class="case-reflection shell">
       <p class="eyebrow">REFLECTION / 项目认识</p>
-      <blockquote>企业真正需要的不是更多 Agent，而是把 AI 处理、人工判断和项目状态编进同一套可执行机制的 Workflow。</blockquote>
+      <blockquote>把冲突留在任务里，把决定留给人，把变化留在记录里。</blockquote>
       <a href="https://nextly-2-0-user-test.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer" aria-label="打开 Nextly 2.0 Portfolio Demo（新窗口打开）">打开 Nextly 2.0 Demo <span aria-hidden="true">↗</span></a>
     </section>
   </article>
