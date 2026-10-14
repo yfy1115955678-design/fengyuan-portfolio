@@ -167,7 +167,28 @@
   .ai-phase-num{width:32px;height:32px;font-size:11px}
 }
 </style>
-</head><body class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n">
+<style id="workflow-step-selector-style">
+.workflow-example button.workflow-step{font:inherit;text-align:left;color:var(--ink);appearance:none;cursor:pointer;width:100%;min-height:220px;padding:24px;display:flex;flex-direction:column;border:1px solid var(--hairline-soft,#e6e6e6);border-radius:14px;background:var(--surface,#fff);transition:border-color .2s,background-color .2s,box-shadow .2s,transform .2s}
+.workflow-example button.workflow-step.is-ai{background:var(--primary-pale,#fff0f3);border-color:#ffd2dc}
+.workflow-example button.workflow-step.is-selected{background:var(--primary-pale,#fff0f3);border-color:var(--primary,#ff385c);box-shadow:0 0 0 1px var(--primary,#ff385c)}
+.workflow-example button.workflow-step:hover{border-color:var(--primary,#ff385c);transform:translateY(-2px)}
+.workflow-example button.workflow-step:focus-visible{outline:3px solid var(--primary,#ff385c);outline-offset:4px}
+.workflow-example .workflow-step-number{font-family:var(--font-mono,monospace);font-size:10px;letter-spacing:.07em;font-weight:700;color:var(--primary,#ff385c)}
+.workflow-example .workflow-step-title{font-size:18px;font-weight:590;line-height:1.45;margin:auto 0 12px;display:block}
+.workflow-example .workflow-step-copy{font-size:12px;line-height:1.75;color:var(--muted,#666);display:block}
+.workflow-selector-help{color:var(--muted,#777);font-size:12px;line-height:1.7;margin:15px 0 0}
+.workflow-step-panel{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(220px,1fr);gap:30px;padding:28px 32px;margin-top:18px;border:1px solid var(--hairline-soft,#e7e7e7);border-radius:14px;background:var(--surface,#fafafa)}
+.workflow-step-panel[hidden]{display:none!important}
+.workflow-panel-eyebrow{font-family:var(--font-mono,monospace);color:var(--primary,#ff385c);font-size:10px;font-weight:700;letter-spacing:.09em}
+.workflow-step-panel h3{font-size:19px;font-weight:620;letter-spacing:-.01em;margin:12px 0}
+.workflow-step-panel p{font-size:13px;line-height:1.85;color:var(--muted,#666);margin:0}
+.workflow-panel-aside{border-left:1px solid var(--hairline-soft,#e7e7e7);padding-left:24px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.workflow-panel-aside b{font-size:12px;color:var(--ink);font-weight:630}
+.workflow-panel-aside p+b{margin-top:12px}
+@media(max-width:960px){.workflow-example{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.workflow-example>div{display:none}.workflow-example button.workflow-step{min-height:172px}.workflow-step-panel{grid-template-columns:1fr;gap:16px}.workflow-panel-aside{border-left:0;border-top:1px solid var(--hairline-soft,#e7e7e7);padding:16px 0 0}}
+@media(max-width:600px){.workflow-example{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.workflow-example button.workflow-step{min-height:166px;padding:17px 14px}.workflow-example .workflow-step-title{font-size:16px;margin:auto 0 8px}.workflow-example .workflow-step-copy{font-size:11px;line-height:1.65}.workflow-step-panel{padding:22px 20px}.workflow-selector-help{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.workflow-example button.workflow-step{transition:none}.workflow-example button.workflow-step:hover{transform:none}}
+</style></head><body class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n">
 <a class="skip-link" href="#main-content">跳到主要内容</a>
 <main id="main-content" class="site-page ai-page"><header class="site-header shell"><a href="/" class="wordmark" aria-label="杨丰源作品集首页"><span class="wordmark-dot" aria-hidden="true"></span><span>杨丰源</span><small>产品企划作品集</small></a><nav aria-label="主要导航"><a href="/projects">项目</a><a href="/ai-workflow" aria-current="page">AI 工作流</a><a href="/about">关于我</a><a href="/resume">简历</a></nav></header><section class="ai-hero shell"><p class="eyebrow">AI EMPOWERED / AI 赋能实践</p><h1>AI 在产品开发中，<br>具体接手哪些工作？</h1><p class="ai-lede">从竞品数据、Review/VOC 到 BOM 与方案初稿，我把 AI 用于清洗、归纳、信息检索和视觉探索，并为每类结果设置人工复核环节。</p><p style="margin-top:16px;font-size:15px;color:var(--muted,#666);"><a href="/projects/nextly" style="color:var(--accent,#ff385c);text-decoration:none;font-weight:500;">Nextly 2.0 ↗</a> 则是基于这些业务痛点设计的交互原型，展示需求冲突与人工决策如何在工作台中衔接。</p></section><section class="ai-values shell"><div class="section-heading compact-heading"><div><p class="eyebrow">CORE USE CASES / 实际使用场景</p><h2>哪些工作交给 AI，哪些需要我来核对？</h2></div></div><div class="ai-values-grid"><div class="ai-value-card"><div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#ff385c);margin-bottom:8px;">01</div><h3 style="font-size:18px;font-weight:620;margin:0 0 12px;">前期调研与需求洞察</h3><div style="font-size:14px;color:var(--muted,#666);line-height:1.7;"><p style="margin:0 0 8px;"><strong style="color:var(--text,#1a1a1a);">输入：</strong>竞品数据 / 评论 / 运营反馈</p><p style="margin:0 0 8px;"><strong style="color:var(--text,#1a1a1a);">AI：</strong>聚类、结构化、补充分析维度</p><p style="margin:0 0 8px;"><strong style="color:var(--text,#1a1a1a);">人工：</strong>判断哪些信号真正具有产品意义</p><p style="margin:0 0 12px;"><strong style="color:var(--text,#1a1a1a);">输出：</strong>机会方向 / 调研结论 / PRD 输入</p></div><div class="tag-row" style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">外部数据整理</span><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">痛点归集</span><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">PRD 产出</span><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">维度拓展收束</span></div></div><div class="ai-value-card"><div class="value-icon">02</div><h3>结构化信息处理</h3><p>需要结构化的信息——表格汇总、框架搭建、BOM 归集、报价表整理。AI 按固定格式输出初稿，人为校验修正，后续维护也更便捷。</p><div class="value-tags"><span>表格汇总</span><span>框架搭建</span><span>BOM 归集</span><span>维护便捷</span></div></div><div class="ai-value-card"><div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#ff385c);margin-bottom:8px;">03</div><h3 style="font-size:18px;font-weight:620;margin:0 0 12px;">AI 辅助造型设计</h3><div style="font-size:14px;color:var(--muted,#666);line-height:1.7;"><p style="margin:0 0 8px;"><strong style="color:var(--text,#1a1a1a);">输入：</strong>产品需求 / CMF 方向 / 结构限制</p><p style="margin:0 0 8px;"><strong style="color:var(--text,#1a1a1a);">AI：</strong>快速生成多个视觉候选方向</p><p style="margin:0 0 8px;"><strong style="color:var(--text,#1a1a1a);">人工：</strong>筛选、修正，并结合制造和产品约束判断</p><p style="margin:0 0 12px;"><strong style="color:var(--text,#1a1a1a);">输出：</strong>可以进入工业设计讨论的概念方向</p></div><div class="tag-row" style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">概念图生成</span><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">多工具协作</span><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">造型拆解</span><span style="font-size:12px;padding:4px 10px;border-radius:20px;background:var(--bg-subtle,#f5f5f5);color:var(--muted,#666);">CMF 方案</span></div></div><div class="ai-value-card"><div class="value-icon">04</div><h3>知识库与经验沉淀</h3><p style="font-size:14px;color:var(--muted,#666);line-height:1.7;margin:0 0 12px;">将长期业务经验和项目边界变成 AI 可以持续调用的上下文，减少长对话中的遗忘和方向漂移。把工艺知识、供应商信息、产品判断原则、CMF 规则、项目上下文和输出规范沉淀为可复用 Skill——不确定时即时查询，比如"拐杖表面工艺有哪些，分别对应哪个供应商，交期预估，过往样品"。</p><div class="value-tags"><span>Skill 沉淀</span><span>即时查询</span><span>工艺匹配</span><span>供应商关联</span></div></div></div></section><section class="team-workflow-section shell"><div class="section-heading compact-heading"><div><p class="eyebrow">FROM PERSONAL USE TO TEAM WORKFLOW</p><h2>把重复性工作整理成可复用流程。</h2></div><p>围绕竞品研究、用户评论和开发资料，整理常用输入字段、输出模板与复核要求，并沉淀 Skill 和知识库，让同事可以沿用同一套分析方法。</p></div><div class="team-workflow-grid"><article><span>01 / INPUT</span><h3>标准化输入</h3><p>市场数据、竞品信息、Review/VOC、CMF/BOM及开发资料</p></article><article><span>02 / OUTPUT</span><h3>固定输出</h3><p>市场调研、竞品分析、产品Brief、项目复盘</p></article><article><span>03 / REVIEW</span><h3>人工复核</h3><p>AI负责数据处理、检索、聚类和初步分析；关键结论由人工复核并用于产品决策</p></article><article><span>04 / KNOWLEDGE</span><h3>团队沉淀</h3><p>将分析框架、输出规范、项目原则和工艺知识沉淀为模板、Skill及结构化知识库</p></article></div><div class="team-workflow-evidence" aria-label="产品开发机制与项目管理范围"><b>六阶段新品开发SOP</b><span>覆盖40+在研项目</span><span>7大品类项目看板</span><p>以上为产品开发机制与项目管理范围，不代表40+项目由AI自动管理。</p></div></section><section class="ai-workflow shell">
 <div class="section-heading compact-heading">
@@ -177,14 +198,55 @@
 </div>
 <p>数据由专业工具或已有业务资料提供；AI 协助整理市场与评论信息，再由人工确认产品要求，推进设计与样品评审。</p>
 </div>
-<div class="workflow-example" aria-label="精品拐杖项目中的 AI 与人工协作链路">
-<article><span>01 / INPUT</span><h3>外部数据输入</h3><p>市场数据、竞品信息、用户评论与现有产品反馈。</p></article>
+<div class="workflow-example" aria-label="可点击查看精品拐杖项目四个步骤" data-workflow-selector>
+<button type="button" class="workflow-step is-selected" id="workflow-step-input" data-workflow-step="input" aria-expanded="true" aria-controls="workflow-panel-input"><span class="workflow-step-number">01 / INPUT</span><span class="workflow-step-title">外部数据输入</span><span class="workflow-step-copy">市场数据、竞品信息、用户评论与现有产品反馈。</span></button>
 <div aria-hidden="true">→</div>
-<article class="is-ai"><span>02 / AI PROCESS</span><h3>清洗与聚类</h3><p>AI 结构化信息、归纳问题并辅助检索，不直接给出产品结论。</p></article>
+<button type="button" class="workflow-step is-ai" id="workflow-step-ai" data-workflow-step="ai" aria-expanded="false" aria-controls="workflow-panel-ai"><span class="workflow-step-number">02 / AI PROCESS</span><span class="workflow-step-title">清洗与聚类</span><span class="workflow-step-copy">AI 结构化信息、归纳问题并辅助检索。</span></button>
 <div aria-hidden="true">→</div>
-<article><span>03 / HUMAN DECISION</span><h3>形成产品要求</h3><p>人工复核证据，综合体验、结构、工艺、成本与市场匹配度。</p></article>
+<button type="button" class="workflow-step" id="workflow-step-human" data-workflow-step="human" aria-expanded="false" aria-controls="workflow-panel-human"><span class="workflow-step-number">03 / HUMAN DECISION</span><span class="workflow-step-title">形成产品要求</span><span class="workflow-step-copy">人工权衡体验、工艺、结构、成本与市场匹配度。</span></button>
 <div aria-hidden="true">→</div>
-<article><span>04 / DELIVERY</span><h3>方案与样品评审</h3><p>首轮 6 种方案进入评审，筛选 5 种继续验证。</p></article>
+<button type="button" class="workflow-step" id="workflow-step-delivery" data-workflow-step="delivery" aria-expanded="false" aria-controls="workflow-panel-delivery"><span class="workflow-step-number">04 / DELIVERY</span><span class="workflow-step-title">方案与样品评审</span><span class="workflow-step-copy">6 种方案进入评审，筛选 5 种继续验证。</span></button>
 </div>
-<div class="workflow-example-note"><strong>边界：</strong>AI 参与数据处理与概念探索；项目负责人组织阶段评审并承担最终判断。</div>
-</section><footer class="site-footer shell"><div><p class="eyebrow">LET'S TALK / 联系我</p><h2>如果你也在寻找值得被做出来的产品。</h2></div><div class="footer-contact"><div class="footer-links"><a href="mailto:yangfengyuan_0817@163.com">yangfengyuan_0817@163.com <span aria-hidden="true">↗</span></a><a href="https://github.com/yfy1115955678-design" target="_blank" rel="noopener noreferrer" aria-label="访问杨丰源的GitHub主页（新窗口打开）">GitHub · yfy1115955678-design <span aria-hidden="true">↗</span></a></div><p>现居浙江宁波 · 开放宁波、嘉兴、苏州及上海嘉定 / 虹桥周边机会</p></div><p class="footer-meta">© 2026 杨丰源</p></footer></main><script src="/assets/cat-cursor.js" defer></script></body></html>
+<p class="workflow-selector-help">点击上方步骤，查看对应的实际操作与阶段产出。也可使用键盘方向键切换。</p>
+<div class="workflow-step-panel" id="workflow-panel-input" data-workflow-panel="input" role="region" aria-labelledby="workflow-step-input">
+<div><span class="workflow-panel-eyebrow">STEP 01 / SOURCE</span><h3>明确输入范围，再看分析结论。</h3><p>以日本站竞品与市场研究资料为基础，结合用户评论、运营反馈和现有产品问题，整理价格、形态、视觉与使用场景等信息。先核对样本和数据来源，避免不同平台的指标被直接混算。</p></div>
+<div class="workflow-panel-aside"><b>人工校验</b><p>核对样本有效性、采集口径与敏感信息。</p><b>阶段产出</b><p>可追溯的研究输入及数据范围说明。</p></div></div>
+<div class="workflow-step-panel" id="workflow-panel-ai" data-workflow-panel="ai" role="region" aria-labelledby="workflow-step-ai" hidden>
+<div><span class="workflow-panel-eyebrow">STEP 02 / STRUCTURE</span><h3>把零散信息变成可讨论的信号。</h3><p>AI 协助清理和结构化商品信息、归纳评论中的高频问题，并为形态、CMF 与工艺讨论整理初步线索。相关结论仍需回到原始数据与评论核对。</p></div>
+<div class="workflow-panel-aside"><b>人工校验</b><p>复核异常数据、重复信息与评论归类误差。</p><b>阶段产出</b><p>竞品梳理、VOC 主题及待验证问题清单。</p></div></div>
+<div class="workflow-step-panel" id="workflow-panel-human" data-workflow-panel="human" role="region" aria-labelledby="workflow-step-human" hidden>
+<div><span class="workflow-panel-eyebrow">STEP 03 / DECISION</span><h3>将研究线索转成明确的产品要求。</h3><p>综合携带场景、接口稳定性、外观完成度与小批量工艺约束，确定优先开发折叠形态，并推进连接结构、CMF 和 UV 图案工艺的方案讨论。</p></div>
+<div class="workflow-panel-aside"><b>人工判断</b><p>决定方向与取舍，确认供应链和成本边界。</p><b>阶段产出</b><p>形态、结构、CMF 与工艺要求。</p></div></div>
+<div class="workflow-step-panel" id="workflow-panel-delivery" data-workflow-panel="delivery" role="region" aria-labelledby="workflow-step-delivery" hidden>
+<div><span class="workflow-panel-eyebrow">STEP 04 / REVIEW</span><h3>让方案接受样品与成本检验。</h3><p>首轮形成 6 种可评审方案，综合握柄适配、上节图案实现、连接稳定性与表面工艺等反馈，选择 5 种继续验证。已完成阶段样品检查，但不将其表述为量产与正式耐久测试通过。</p></div>
+<div class="workflow-panel-aside"><b>人工评审</b><p>设计、供应链与业务人员核对方案问题。</p><b>阶段产出</b><p>方案取舍、样品问题与下一轮验证事项。</p></div></div>
+<div class="workflow-example-note"><strong>工作边界：</strong>AI 负责辅助整理和发现线索；产品定义、阶段评审与最终取舍由人负责。</div>
+</section><footer class="site-footer shell"><div><p class="eyebrow">LET'S TALK / 联系我</p><h2>如果你也在寻找值得被做出来的产品。</h2></div><div class="footer-contact"><div class="footer-links"><a href="mailto:yangfengyuan_0817@163.com">yangfengyuan_0817@163.com <span aria-hidden="true">↗</span></a><a href="https://github.com/yfy1115955678-design" target="_blank" rel="noopener noreferrer" aria-label="访问杨丰源的GitHub主页（新窗口打开）">GitHub · yfy1115955678-design <span aria-hidden="true">↗</span></a></div><p>现居浙江宁波 · 开放宁波、嘉兴、苏州及上海嘉定 / 虹桥周边机会</p></div><p class="footer-meta">© 2026 杨丰源</p></footer></main><script src="/assets/cat-cursor.js" defer></script><script id="workflow-step-selector-script">
+(function(){
+  var root=document.querySelector('[data-workflow-selector]');
+  if(!root)return;
+  var buttons=Array.from(root.querySelectorAll('[data-workflow-step]'));
+  var panels=Array.from(document.querySelectorAll('[data-workflow-panel]'));
+  function selectStep(value,focus){
+    buttons.forEach(function(button){
+      var active=button.dataset.workflowStep===value;
+      button.classList.toggle('is-selected',active);
+      button.setAttribute('aria-expanded',String(active));
+      if(active&&focus)button.focus();
+    });
+    panels.forEach(function(panel){panel.hidden=panel.dataset.workflowPanel!==value;});
+  }
+  buttons.forEach(function(button,index){
+    button.addEventListener('click',function(){selectStep(button.dataset.workflowStep,false);});
+    button.addEventListener('keydown',function(event){
+      if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key))return;
+      event.preventDefault();
+      var next=event.key==='Home'?0:event.key==='End'?buttons.length-1:
+        index+(['ArrowLeft','ArrowUp'].includes(event.key)?-1:1);
+      next=(next+buttons.length)%buttons.length;
+      selectStep(buttons[next].dataset.workflowStep,true);
+    });
+  });
+  selectStep('input',false);
+})();
+</script></body></html>
