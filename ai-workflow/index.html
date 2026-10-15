@@ -169,11 +169,16 @@
 </style>
 <style id="workflow-step-selector-style">
 .workflow-example button.workflow-step{font:inherit;text-align:left;color:var(--ink);appearance:none;cursor:pointer;width:100%;min-height:220px;padding:24px;display:flex;flex-direction:column;border:1px solid var(--hairline-soft,#e6e6e6);border-radius:14px;background:var(--surface,#fff);transition:border-color .2s,background-color .2s,box-shadow .2s,transform .2s}
-.workflow-example button.workflow-step.is-ai{background:var(--primary-pale,#fff0f3);border-color:#ffd2dc}
 .workflow-example button.workflow-step.is-selected{background:var(--primary-pale,#fff0f3);border-color:var(--primary,#ff385c);box-shadow:0 0 0 1px var(--primary,#ff385c)}
-.workflow-example button.workflow-step:hover{border-color:var(--primary,#ff385c);transform:translateY(-2px)}
+.workflow-example button.workflow-step:not(.is-selected):hover{border-color:var(--muted,#999);transform:translateY(-2px)}
+.workflow-example button.workflow-step.is-selected:hover{transform:translateY(-2px)}
 .workflow-example button.workflow-step:focus-visible{outline:3px solid var(--primary,#ff385c);outline-offset:4px}
-.workflow-example .workflow-step-number{font-family:var(--font-mono,monospace);font-size:10px;letter-spacing:.07em;font-weight:700;color:var(--primary,#ff385c)}
+.workflow-example .workflow-step-number{font-family:var(--font-mono,monospace);font-size:10px;letter-spacing:.07em;font-weight:700;color:var(--muted,#757575)}
+.workflow-example button.workflow-step:not(.is-selected){background:#fff;border-color:var(--hairline-soft,#e6e6e6);box-shadow:none;color:var(--ink,#222)}
+.workflow-example button.workflow-step:not(.is-selected) .workflow-step-title{color:var(--ink,#222)}
+.workflow-example button.workflow-step:not(.is-selected) .workflow-step-number{color:var(--muted,#757575)}
+.workflow-example button.workflow-step.is-selected .workflow-step-title,.workflow-example button.workflow-step.is-selected .workflow-step-number{color:var(--primary,#ff385c)}
+.workflow-example>div[aria-hidden="true"]{color:var(--muted,#999)}
 .workflow-example .workflow-step-title{font-size:18px;font-weight:590;line-height:1.45;margin:auto 0 12px;display:block}
 .workflow-example .workflow-step-copy{font-size:12px;line-height:1.75;color:var(--muted,#666);display:block}
 .workflow-selector-help{color:var(--muted,#777);font-size:12px;line-height:1.7;margin:15px 0 0}
@@ -201,7 +206,7 @@
 <div class="workflow-example" aria-label="可点击查看精品拐杖项目四个步骤" data-workflow-selector>
 <button type="button" class="workflow-step is-selected" id="workflow-step-input" data-workflow-step="input" aria-expanded="true" aria-controls="workflow-panel-input"><span class="workflow-step-number">01 / INPUT</span><span class="workflow-step-title">外部数据输入</span><span class="workflow-step-copy">市场数据、竞品信息、用户评论与现有产品反馈。</span></button>
 <div aria-hidden="true">→</div>
-<button type="button" class="workflow-step is-ai" id="workflow-step-ai" data-workflow-step="ai" aria-expanded="false" aria-controls="workflow-panel-ai"><span class="workflow-step-number">02 / AI PROCESS</span><span class="workflow-step-title">清洗与聚类</span><span class="workflow-step-copy">AI 结构化信息、归纳问题并辅助检索。</span></button>
+<button type="button" class="workflow-step" id="workflow-step-ai" data-workflow-step="ai" aria-expanded="false" aria-controls="workflow-panel-ai"><span class="workflow-step-number">02 / AI PROCESS</span><span class="workflow-step-title">清洗与聚类</span><span class="workflow-step-copy">AI 结构化信息、归纳问题并辅助检索。</span></button>
 <div aria-hidden="true">→</div>
 <button type="button" class="workflow-step" id="workflow-step-human" data-workflow-step="human" aria-expanded="false" aria-controls="workflow-panel-human"><span class="workflow-step-number">03 / HUMAN DECISION</span><span class="workflow-step-title">形成产品要求</span><span class="workflow-step-copy">人工权衡体验、工艺、结构、成本与市场匹配度。</span></button>
 <div aria-hidden="true">→</div>
